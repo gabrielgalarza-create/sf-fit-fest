@@ -271,25 +271,25 @@ button { font: inherit; }
 .logo-row {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px 22px;
-  font-family: var(--display);
-  font-size: clamp(14px, 1.6vw, 18px);
-  letter-spacing: 0.12em;
-  color: var(--white);
+  align-items: center;
+  gap: 18px 32px;
 }
-.logo-row span {
-  position: relative;
-  padding-right: 22px;
+.logo-row img {
+  height: 32px;
+  width: auto;
+  max-width: 140px;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+  opacity: 0.92;
+  transition: opacity .2s ease, transform .2s ease;
 }
-.logo-row span:not(:last-child)::after {
-  content: "";
-  position: absolute;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 6px; height: 6px;
-  border-radius: 50%;
-  background: var(--yellow);
+.logo-row img:hover {
+  opacity: 1;
+  transform: translateY(-1px);
+}
+@media (max-width: 600px) {
+  .logo-row { gap: 14px 22px; }
+  .logo-row img { height: 26px; max-width: 110px; }
 }
 .hero__scroll {
   position: absolute;
@@ -503,10 +503,11 @@ button { font: inherit; }
   border: 1px solid var(--gray-200);
   border-radius: var(--radius);
   padding: 22px 20px;
-  min-height: 120px;
+  min-height: 140px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: flex-start;
   transition: transform .2s ease, border-color .2s ease;
 }
 .partner:hover { transform: translateY(-2px); border-color: var(--black); }
@@ -515,10 +516,20 @@ button { font: inherit; }
   font-size: clamp(18px, 2.6vw, 28px);
   letter-spacing: 0.04em;
 }
+.partner__img {
+  display: block;
+  height: 36px;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+  filter: brightness(0);
+  opacity: 0.88;
+}
 .partner__role {
   font-size: 13px;
   color: var(--gray-500);
   margin-top: 14px;
+  line-height: 1.45;
 }
 .partner--tba {
   background: var(--black);
