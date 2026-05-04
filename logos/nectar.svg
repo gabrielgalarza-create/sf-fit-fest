@@ -1,4 +1,34 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 70" preserveAspectRatio="xMidYMid meet">
-  <text x="0" y="32" font-family="Georgia, 'Playfair Display', serif" font-style="italic" font-weight="700" font-size="34" fill="#000">Nectar</text>
-  <text x="0" y="60" font-family="Helvetica, Arial, sans-serif" font-weight="600" font-size="20" letter-spacing="6" fill="#000">COLLECTIVE</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 170" preserveAspectRatio="xMidYMid meet">
+  <!-- Sunburst icon -->
+  <g transform="translate(180 50)" fill="#000">
+    <circle r="4"/>
+    <g id="np"><path d="M0 -16 L1.4 -32 L0 -42 L-1.4 -32 Z"/></g>
+    <use href="#np" transform="rotate(15)"/>
+    <use href="#np" transform="rotate(30)"/>
+    <use href="#np" transform="rotate(45)"/>
+    <use href="#np" transform="rotate(60)"/>
+    <use href="#np" transform="rotate(75)"/>
+    <use href="#np" transform="rotate(90)"/>
+    <use href="#np" transform="rotate(105)"/>
+    <use href="#np" transform="rotate(120)"/>
+    <use href="#np" transform="rotate(135)"/>
+    <use href="#np" transform="rotate(150)"/>
+    <use href="#np" transform="rotate(165)"/>
+    <use href="#np" transform="rotate(180)"/>
+    <use href="#np" transform="rotate(195)"/>
+    <use href="#np" transform="rotate(210)"/>
+    <use href="#np" transform="rotate(225)"/>
+    <use href="#np" transform="rotate(240)"/>
+    <use href="#np" transform="rotate(255)"/>
+    <use href="#np" transform="rotate(270)"/>
+    <use href="#np" transform="rotate(285)"/>
+    <use href="#np" transform="rotate(300)"/>
+    <use href="#np" transform="rotate(315)"/>
+    <use href="#np" transform="rotate(330)"/>
+    <use href="#np" transform="rotate(345)"/>
+  </g>
+  <!-- "Nectar" italic serif -->
+  <text x="180" y="125" font-family="Georgia, 'Playfair Display', 'Times New Roman', serif" font-style="italic" font-weight="700" font-size="40" fill="#000" text-anchor="middle">Nectar</text>
+  <!-- "COLLECTIVE" tracked sans -->
+  <text x="180" y="156" font-family="Helvetica, Arial, sans-serif" font-weight="600" font-size="14" letter-spacing="6" fill="#000" text-anchor="middle">COLLECTIVE</text>
 </svg>
