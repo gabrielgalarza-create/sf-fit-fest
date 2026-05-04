@@ -269,27 +269,34 @@ button { font: inherit; }
   margin-bottom: 12px;
 }
 .logo-row {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   align-items: center;
-  gap: 18px 32px;
+  justify-items: center;
+  gap: 22px 16px;
+  width: 100%;
+  max-width: 980px;
 }
 .logo-row img {
-  height: 32px;
-  width: auto;
-  max-width: 140px;
+  height: 38px;
+  width: 100%;
+  max-width: 130px;
   object-fit: contain;
+  object-position: center;
   filter: brightness(0) invert(1);
-  opacity: 0.92;
+  opacity: 0.9;
   transition: opacity .2s ease, transform .2s ease;
 }
 .logo-row img:hover {
   opacity: 1;
   transform: translateY(-1px);
 }
-@media (max-width: 600px) {
-  .logo-row { gap: 14px 22px; }
-  .logo-row img { height: 26px; max-width: 110px; }
+@media (min-width: 760px) {
+  .logo-row { grid-template-columns: repeat(8, 1fr); }
+}
+@media (max-width: 480px) {
+  .logo-row { grid-template-columns: repeat(2, 1fr); gap: 18px 14px; }
+  .logo-row img { height: 32px; max-width: 110px; }
 }
 .hero__scroll {
   position: absolute;
@@ -502,12 +509,13 @@ button { font: inherit; }
   background: var(--white);
   border: 1px solid var(--gray-200);
   border-radius: var(--radius);
-  padding: 22px 20px;
-  min-height: 140px;
+  padding: 24px 20px;
+  min-height: 150px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: stretch;
+  text-align: left;
   transition: transform .2s ease, border-color .2s ease;
 }
 .partner:hover { transform: translateY(-2px); border-color: var(--black); }
@@ -518,17 +526,18 @@ button { font: inherit; }
 }
 .partner__img {
   display: block;
-  height: 36px;
-  width: auto;
-  max-width: 100%;
+  height: 44px;
+  width: 100%;
+  max-width: 160px;
   object-fit: contain;
+  object-position: left center;
   filter: brightness(0);
-  opacity: 0.88;
+  opacity: 0.9;
 }
 .partner__role {
   font-size: 13px;
   color: var(--gray-500);
-  margin-top: 14px;
+  margin-top: 16px;
   line-height: 1.45;
 }
 .partner--tba {
@@ -546,7 +555,7 @@ button { font: inherit; }
 .partners-cta a { font-weight: 600; text-decoration: underline; }
 
 @media (min-width: 720px) {
-  .partners-grid { grid-template-columns: repeat(4, 1fr); }
+  .partners-grid { grid-template-columns: repeat(3, 1fr); }
 }
 
 /* ============ AUDIENCE ============ */
