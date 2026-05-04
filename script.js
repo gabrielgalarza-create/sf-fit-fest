@@ -1,4 +1,4 @@
-// Tappable programming cards — toggle .is-open
+// Tappable programming cards: toggle .is-open
 document.querySelectorAll('[data-card]').forEach((card) => {
   const open = () => card.classList.toggle('is-open');
   card.addEventListener('click', (e) => {
