@@ -361,6 +361,48 @@ button { font: inherit; }
 }
 
 /* ============ SCHEDULE ============ */
+.ros-phase-label {
+  display: inline-block;
+  font-family: var(--display);
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--black);
+  background: var(--yellow);
+  padding: 7px 14px;
+  border-radius: 999px;
+  margin: 28px 0 6px;
+}
+.ros-phase-label:first-of-type { margin-top: 8px; }
+
+/* ============ VENUE / SITE MAP ============ */
+.venue-map {
+  margin: 0;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  box-shadow: var(--shadow-md);
+}
+.venue-map img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.venue-map figcaption {
+  font-family: var(--body);
+  font-size: 13px;
+  color: var(--gray-500);
+  text-align: center;
+  padding: 14px 16px;
+  background: var(--white);
+  letter-spacing: 0.04em;
+}
+.venue-cta {
+  text-align: center;
+  margin-top: 28px;
+}
+
 .schedule {
   list-style: none;
   margin: 0;
