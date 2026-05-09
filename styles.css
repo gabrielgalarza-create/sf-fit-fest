@@ -508,9 +508,9 @@ button { font: inherit; }
   height: 240px;
   object-fit: cover;
 }
-/* Portrait shots: shift the crop up so the subject's face is visible */
+/* Portrait shots: anchor crop to top so the subject's face is visible */
 .card__img[src*="coach_daniel"],
-.card__img[src*="dj_jaymee"] { object-position: center 18%; }
+.card__img[src*="dj_jaymee"] { object-position: center top; }
 .card__body {
   position: relative;
   padding: 22px 22px 24px;
