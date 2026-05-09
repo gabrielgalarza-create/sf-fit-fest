@@ -619,6 +619,10 @@ button { font: inherit; }
   filter: brightness(0);
   opacity: 0.9;
 }
+/* The Facility logo ships as white-on-black; invert it so it reads
+   as black-on-(transparent looking) on the white partner card */
+.partner__img[src*="thefacility"] { filter: invert(1); }
+.logo-row img[src*="thefacility"] { filter: none; }
 .partner__role {
   font-size: 13px;
   color: var(--gray-500);
