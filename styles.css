@@ -505,8 +505,9 @@ button { font: inherit; }
 .card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
 .card__img {
   width: 100%;
-  height: 240px;
+  aspect-ratio: 1 / 1;
   object-fit: cover;
+  display: block;
 }
 /* Portrait shots: anchor crop to top so the subject's face is visible */
 .card__img[src*="coach_daniel"],
