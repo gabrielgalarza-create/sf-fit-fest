@@ -622,10 +622,11 @@ button { font: inherit; }
   filter: brightness(0);
   opacity: 0.9;
 }
-/* The Facility logo ships as white-on-black; invert it so it reads
-   as black-on-(transparent looking) on the white partner card */
-.partner__img[src*="thefacility"] { filter: invert(1); }
-.logo-row img[src*="thefacility"] { filter: none; }
+/* The Facility logo ships as a white-on-black square; invert it on
+   the white partner card and drop the filter on the dark hero. Square
+   logos need more height to match the visual presence of horizontal logos. */
+.partner__img[src*="thefacility"] { height: 72px; max-width: 72px; filter: invert(1); }
+.logo-row img[src*="thefacility"] { height: 60px; max-width: 60px; filter: none; }
 .partner__role {
   font-size: 13px;
   color: var(--gray-500);
