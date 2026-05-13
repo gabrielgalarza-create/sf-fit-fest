@@ -511,6 +511,7 @@ button { font: inherit; }
 }
 /* Portrait shots: anchor crop to top so the subject's face is visible */
 .card__img[src*="coach_daniel"],
+.card__img[src*="coach_starr"],
 .card__img[src*="dj_jaymee"] { object-position: center top; }
 .card__body {
   position: relative;
