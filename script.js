@@ -41,7 +41,7 @@ document.querySelectorAll('.card, .partner, .stat, .aud').forEach((el) => {
 
   // Pre-register CTA clicks (any of the pre-register buttons or links)
   document.querySelectorAll(
-    'a[href="#register"], a[href*="overthetopxp.com/sffitfest"]'
+    '[data-rsvp-open], a[href="#register"], a[href*="overthetopxp.com/sffitfest"]'
   ).forEach((el) => {
     el.addEventListener('click', () => {
       const section = el.closest('section');
@@ -70,4 +70,43 @@ document.querySelectorAll('.card, .partner, .stat, .aud').forEach((el) => {
   if (sponsorEmail) {
     sponsorEmail.addEventListener('click', () => track('sponsor_email_clicked'));
   }
+})();
+
+// RSVP modal: open Sweatpals event page in an in-page popup
+(function rsvpModal() {
+  const modal = document.getElementById('rsvp-modal');
+  if (!modal) return;
+  const frame = modal.querySelector('.rsvp-modal__frame');
+  const RSVP_URL = 'https://sweatpals.com/super-bowl-sf-fit-fest-31a';
+
+  function open() {
+    frame.src = RSVP_URL;
+    modal.hidden = false;
+    modal.setAttribute('aria-hidden', 'false');
+    document.body.classList.add('rsvp-open');
+  }
+
+  function close() {
+    modal.hidden = true;
+    modal.setAttribute('aria-hidden', 'true');
+    frame.src = 'about:blank';
+    document.body.classList.remove('rsvp-open');
+  }
+
+  document.querySelectorAll('[data-rsvp-open]').forEach((el) => {
+    el.addEventListener('click', (e) => {
+      // Cmd/Ctrl/Shift/middle-click -> let the browser open in a new tab
+      if (e.metaKey || e.ctrlKey || e.shiftKey || e.button === 1) return;
+      e.preventDefault();
+      open();
+    });
+  });
+
+  modal.addEventListener('click', (e) => {
+    if (e.target.closest('[data-rsvp-close]')) close();
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && !modal.hidden) close();
+  });
 })();

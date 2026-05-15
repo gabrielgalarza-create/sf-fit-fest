@@ -38,7 +38,7 @@
     <a href="#audience">Audience</a>
     <a href="#gallery">Gallery</a>
   </nav>
-  <a href="#register" class="btn btn--small btn--yellow">Pre-register</a>
+  <a href="https://sweatpals.com/super-bowl-sf-fit-fest-31a" target="_blank" rel="noopener" data-rsvp-open class="btn btn--small btn--yellow">Pre-register</a>
 </header>
 
 <!-- HERO -->
@@ -55,7 +55,7 @@
       <span class="line line--small">SUMMER EDITION</span>
     </h1>
     <div class="hero__ctas">
-      <a class="btn btn--yellow btn--lg" href="#register">Pre-register →</a>
+      <a class="btn btn--yellow btn--lg" href="https://sweatpals.com/super-bowl-sf-fit-fest-31a" target="_blank" rel="noopener" data-rsvp-open>Pre-register →</a>
       <a class="btn btn--ghost btn--lg" href="#programming">See what's happening</a>
     </div>
     <div class="hero__partners">
@@ -454,10 +454,7 @@
     <span class="kicker">Get in</span>
     <h2 class="h2">Pre-register and lock your spot.</h2>
     <div class="cta-row">
-      <!-- Sweatpals widget begin -->
-      <script src="https://sweatpals.com/static/embed/event/checkout/script.js?enableAutoEmbed=false&eventAlias=super-bowl-sf-fit-fest-31a&colorHex=ffffff&fontFamily=Poppins&priceTierId=e78b1876-6b2e-4723-be33-e5b485d07d21"></script>
-      <iframe class="sweatpals-embed" style="width: 100%; max-width: 320px; height: 56px; border: 0;" src="https://sweatpals.com/embed/super-bowl-sf-fit-fest-31a/buy-ticket?priceTierId=e78b1876-6b2e-4723-be33-e5b485d07d21&size=lg&colorHex=ffffff&fontFamily=Poppins&buttonText=RSVP&loader=false"></iframe>
-      <!-- Sweatpals widget end -->
+      <a class="btn btn--black btn--lg" href="https://sweatpals.com/super-bowl-sf-fit-fest-31a" target="_blank" rel="noopener" data-rsvp-open>Pre-register →</a>
     </div>
   </div>
 </section>
@@ -490,6 +487,15 @@
     © 2026 Over The Top. All rights reserved. SF Fit Fest is an OTT production.
   </div>
 </footer>
+
+<!-- RSVP modal: opens the Sweatpals event page in an in-page popup -->
+<div id="rsvp-modal" class="rsvp-modal" hidden aria-hidden="true">
+  <div class="rsvp-modal__overlay" data-rsvp-close></div>
+  <div class="rsvp-modal__panel" role="dialog" aria-modal="true" aria-label="RSVP to SF Fit Fest">
+    <button class="rsvp-modal__close" data-rsvp-close type="button" aria-label="Close">×</button>
+    <iframe class="rsvp-modal__frame" title="RSVP to SF Fit Fest" allow="payment *"></iframe>
+  </div>
+</div>
 
 <script src="script.js"></script>
 </body>
