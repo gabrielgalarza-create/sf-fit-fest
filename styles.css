@@ -634,11 +634,17 @@ button { font: inherit; }
   filter: brightness(0);
   opacity: 0.9;
 }
-/* The Facility logo ships as a white-on-black square; invert it on
-   the white partner card and drop the filter on the dark hero. Square
-   logos need more height to match the visual presence of horizontal logos. */
-.partner__img[src*="thefacility"] { height: 72px; max-width: 72px; filter: invert(1); }
-.logo-row img[src*="thefacility"] { height: 60px; max-width: 60px; filter: none; }
+/* The Facility / FITSTARR logos ship as light-on-black squares; invert
+   them on the white partner card and drop the filter on the dark hero.
+   510 Society is a black-on-transparent square — no invert needed, just
+   the size bump so square logos read at the same visual weight as
+   horizontal ones. */
+.partner__img[src*="thefacility"],
+.partner__img[src*="fitstarr"] { height: 72px; max-width: 72px; filter: invert(1); }
+.logo-row img[src*="thefacility"],
+.logo-row img[src*="fitstarr"] { height: 60px; max-width: 60px; filter: none; }
+.partner__img[src*="510society"] { height: 72px; max-width: 72px; }
+.logo-row img[src*="510society"] { height: 60px; max-width: 60px; }
 .partner__role {
   font-size: 13px;
   color: var(--gray-500);
