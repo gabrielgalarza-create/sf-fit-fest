@@ -255,6 +255,9 @@ button { font: inherit; }
   gap: 12px;
   margin-bottom: 48px;
 }
+.hero__ctas .btn--lg,
+.hero__ctas .rsvp-trigger { min-width: 260px; }
+.hero__ctas .rsvp-trigger .btn--lg { width: 100%; min-width: 0; }
 .hero__partners {
   border-top: 1px solid rgba(255,255,255,.15);
   padding-top: 22px;
