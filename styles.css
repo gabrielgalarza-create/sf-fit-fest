@@ -105,16 +105,11 @@ button { font: inherit; }
   letter-spacing: 0.04em;
 }
 .brand-mark {
-  display: inline-block;
-  background: var(--yellow);
-  color: var(--black);
-  padding: 6px 10px;
-  border-radius: 8px;
-  font-family: var(--display);
-  font-size: 14px;
-  letter-spacing: 0.05em;
+  display: block;
+  height: 32px;
+  width: auto;
 }
-.brand-mark--lg { font-size: 28px; padding: 12px 16px; border-radius: 12px; }
+.brand-mark--lg { height: 60px; }
 .brand-divider {
   width: 1px; height: 18px;
   background: rgba(255,255,255,.25);
