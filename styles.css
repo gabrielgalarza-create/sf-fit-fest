@@ -301,7 +301,8 @@ button { font: inherit; }
   .logo-row img { height: 32px; max-width: 110px; margin-right: 32px; }
 }
 @media (prefers-reduced-motion: reduce) {
-  .logo-row { animation: none; }
+  .logo-row,
+  .partner-track { animation: none; }
 }
 .hero__scroll {
   position: absolute;
@@ -603,13 +604,22 @@ button { font: inherit; }
   margin: 40px 0 14px;
 }
 .partners-subhead:first-of-type { margin-top: 24px; }
-.partners-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 12px;
+.partner-marquee {
+  overflow: hidden;
   margin-top: 12px;
+  -webkit-mask-image: linear-gradient(to right, transparent, #000 4%, #000 96%, transparent);
+  mask-image: linear-gradient(to right, transparent, #000 4%, #000 96%, transparent);
 }
+.partner-track {
+  display: flex;
+  width: max-content;
+  animation: logo-scroll 55s linear infinite;
+}
+.partner-track:hover { animation-play-state: paused; }
+.partner-track--alt { animation-duration: 46s; }
 .partner {
+  flex: 0 0 196px;
+  margin-right: 12px;
   background: var(--white);
   border: 1px solid var(--gray-200);
   border-radius: var(--radius);
@@ -668,8 +678,8 @@ button { font: inherit; }
 }
 .partners-cta a { font-weight: 600; text-decoration: underline; }
 
-@media (min-width: 720px) {
-  .partners-grid { grid-template-columns: repeat(3, 1fr); }
+@media (max-width: 480px) {
+  .partner { flex-basis: 172px; }
 }
 
 /* ============ AUDIENCE ============ */
