@@ -809,6 +809,9 @@ button { font: inherit; }
   display: inline-block;
   line-height: 0;
 }
+/* The wrapper zeroes line-height to remove the iframe's inline gap; restore
+   a normal line-height on the visible button so it matches non-RSVP buttons. */
+.rsvp-trigger .btn { line-height: 1.55; }
 .rsvp-trigger__frame {
   position: absolute;
   inset: 0;
