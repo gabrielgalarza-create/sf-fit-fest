@@ -593,6 +593,24 @@ button { font: inherit; }
 @media (min-width: 1080px) {
   .prog-grid { grid-template-columns: repeat(3, 1fr); }
 }
+/* Mobile: swipeable horizontal carousel instead of a long vertical stack */
+@media (max-width: 699px) {
+  .prog-grid {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 14px;
+    padding-bottom: 14px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  .prog-grid::-webkit-scrollbar { display: none; }
+  .prog-grid > .card {
+    flex: 0 0 86%;
+    scroll-snap-align: start;
+    align-self: flex-start;
+  }
+}
 
 /* ============ PARTNERS ============ */
 .partners-subhead {
