@@ -644,7 +644,7 @@
 }
 
 
-.ottff .ff-card__img[src*="coach_daniel"], .ottff .ff-card__img[src*="coach_starr"], .ottff .ff-card__img[src*="dj_jaymee"] { object-position: center top; }
+.ottff .ff-card__img[src*="coach_daniel"], .ottff .ff-card__img[src*="coach_starr"], .ottff .ff-card__img[src*="dj_jaymee"], .ottff .ff-card__img[src*="dj_umami"] { object-position: center top; }
 
 .ottff .ff-card__body {
   position: relative;
